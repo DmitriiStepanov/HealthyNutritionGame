@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Form</title>
+	<link rel="stylesheet" href="../css/form.css" />
+	<script defer src="../js/form.js"></script>
+</head>
+
+<body>
+	<div id="modalForm" class="modal">
+		<div class="modal-content">
+			<div class="modal-header"></div>
+			<div class="modal-body">
+				<div class="modal-body-text">
+					<div>Привет, <span id="username-autorized"></span>!</div>
+					Знаешь ли ты, сколько нужно тебе потреблять энергии, чтобы
+					обеспечивать свои организм необходимыми ресурсами? Думаю, нет.
+					Ученый Харрис-Бенедикт вывел формулу для расчета. Да, у нее есть
+					погрешность. Но так ты сможешь лучше понять свои потребности.
+					Заполняй скорее свои данные и нажимаю на кнопку "Рассчитать мою
+					норму" А затем иди играть:)
+				</div>
+				<div class="modal-body-button">
+					<button id="modalFormButton">Окей</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="cc-result-box" class="modal" style="display: none">
+		<div class="reslt-content">
+			<h2>Ваша потребность :</h2>
+			<h3 id="h3-cc-result">
+				<span id="resultNumber"></span> килокалорий в сутки!<span id="cc-result"></span>
+			</h3>
+			<div class="modal-body-button">
+				<button id="result-box-reset-btn">Рассчитать снова</button>
+				<button id="result-box-play-btn">Играть</button>
+			</div>
+		</div>
+	</div>
+	<div class="form-page">
+		<div class="form-page-contnet">
+			<section>
+				<h2>Калькулятор калорийности</h2>
+				<form class="form" id="form-calorie">
+					<div class="input-section btns">
+						<h3>Пол</h3>
+						<div class="btns-flex">
+							<label>Male</label>
+							<input type="button" class="btn-input btn-active" id="male-btn" value="Мужской" />
+							<label>Female</label>
+							<input type="button" class="btn-input btn-not-active" id="female-btn" value="Женский" />
+						</div>
+					</div>
+					<div class="input-section inputs inp-norm">
+						<label>Возраст:</label>
+						<input type="number" min="0" max="120" id="ageInput" />
+						<span class="input-after-info cc-years">лет</span>
+					</div>
+
+					<div class="input-section inputs inp-norm">
+						<label>Вес:</label>
+						<input type="number" id="weigthInput" />
+						<span class="input-after-info cc-kg">кг</span>
+					</div>
+
+					<div class="input-section inputs inp-2-fields">
+						<label>Рост:</label>
+						<input type="number" class="m-input" />
+						<span class="input-after-info m-span">м</span>
+						<input type="number" class="cm-input" max="99" />
+						<span class="input-after-info cm-span">см</span>
+					</div>
+
+					<div class="input-section radio-btns">
+						<h3>Уровень активности: <span class="info-icon">ⓘ</span></h3>
+						<div class="info-box">
+							<p>
+								<strong>Сидячий:</strong><br />Мало упражнений или вообще без
+								них
+							</p>
+							<p>
+								<strong>Слегка активный:</strong><br />Легкие упражнения/спорт
+								1-3 дня/неделя
+							</p>
+							<p>
+								<strong>Умеренно активный:</strong><br />Умеренные физические
+								нагрузки/спорт 3-5 дней в неделю
+							</p>
+							<p>
+								<strong>Любитель спорта:</strong><br />Интенсивные физические
+								упражнения/спорт 6-7 дней в неделю
+							</p>
+							<p>
+								<b>Профессионал: </b><br />Тяжелые упражнения / спорт и
+								физическая работа или тренировка 2 раза в день
+							</p>
+						</div>
+						<div class="radio-flex">
+							<div class="radio-btn">
+								<input type="radio" id="sedentary" name="activity-level" value="sedentary" checked />
+								<label for="sedentary">Сидячий</label>
+							</div>
+							<div class="radio-btn">
+								<input type="radio" id="lightly-active" name="activity-level" value="lightly-active" />
+								<label for="lightly-active">Слегка активный</label>
+							</div>
+							<div class="radio-btn">
+								<input type="radio" id="moderately-active" name="activity-level" value="moderately-active" />
+								<label for="moderately-active">Умеренно активный</label>
+							</div>
+							<div class="radio-btn">
+								<input type="radio" id="very-active" name="activity-level" value="very-active" />
+								<label for="very-active">Любитель спорта</label>
+							</div>
+							<div class="radio-btn">
+								<input type="radio" id="extra-active" name="activity-level" value="extra-active" />
+								<label for="extra-active">Профессионал</label>
+							</div>
+						</div>
+					</div>
+
+					<input class="btn-submit" type="submit" value="Рассчитать мою норму" />
+					</а>
+			</section>
+		</div>
+	</div>
+</body>
+
+</html>

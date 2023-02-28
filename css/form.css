@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background-color: white;
+  color: black;
+  font-size: 16px;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  font-size: 30px;
+}
+h3 {
+  margin: 0px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+a {
+  color: #6a62d2;
+  text-decoration: none;
+}
+.form {
+  width: 100%;
+  max-width: 450px;
+  padding: 35px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+  border: none;
+  height: 600px
+}
+.form .btns label {
+  display: none;
+}
+.form .btns .btns-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.form .input-section h3 {
+  display: flex;
+  align-items: center;
+}
+.form .input-section .info-box {
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+  background-color: #fff;
+  color: #000;
+  padding: 5px 10px;
+  position: absolute;
+  bottom: 105%;
+  left: 0;
+  z-index: 1;
+  width: 95%;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s;
+}
+.form .input-section .info-box p {
+  margin: 10px;
+  display: block;
+}
+.form .input-section .info-icon {
+  font-size: 26px;
+  margin-left: 10px;
+  cursor: help;
+}
+.form .input-section:not(:first-child) {
+  margin-top: 25px;
+}
+.form .inputs {
+  display: flex;
+  align-items: center;
+}
+.form .inputs input {
+  padding: 10px 20px;
+  border-radius: 2px;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.form .inputs label {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.form .inputs .input-after-info {
+  margin-left: 10px;
+}
+.form .inp-norm input {
+  outline: 0;
+     background: #f2f2f2;
+     border-radius: 4px;
+     width: 70%;
+     border: 0;
+     margin: 15px 0;
+     padding: 15px;
+     font-size: 14px;
+}
+.form .inp-norm label {
+  width: 30%;
+}
+.form .inp-norm .input-after-info {
+  width: 10%;
+}
+.form .inp-2-fields input {
+  width: 25%;
+  outline: 0;
+  background: #f2f2f2;
+  border-radius: 4px;
+  border: 0;
+  padding: 15px;
+  font-size: 14px;
+}
+.form .inp-2-fields label {
+  width: 30%;
+}
+.form .inp-2-fields .input-after-info {
+  width: 8%;
+}
+.form .radio-btns {
+  position: relative;
+}
+.form .radio-btns p {
+  margin: 2px 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.form .radio-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+}
+.form .radio-flex .radio-btn {
+  width: 48%;
+}
+.form .radio-flex .radio-btn label {
+  cursor: pointer;
+  padding: 5px 2px;
+}
+.form input[type="radio"] {
+  visibility: hidden;
+  display: none;
+}
+.form input[type="radio"] + label:before {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+  margin-bottom: -3px;
+  margin-top: 5px;
+  content: "";
+  color: #7dca5c;
+  display: inline-block;
+  vertical-align: baseline;
+  border: 1px solid #777;
+  background: #fff;
+  font-size: 25px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.form input[type="radio"]:checked + label:before {
+  background: #6a62d2;
+}
+.btn, .btn-input, .btn-submit {
+  padding: 10px 20px;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #6a62d2;
+}
+.btn-input {
+  width: 45%;
+  margin-top: 10px;
+}
+.btn-active {
+  opacity: 1;
+  cursor: default;
+}
+.btn-not-active {
+  opacity: 0.5;
+}
+.btn-submit {
+  width: 100%;
+  margin-top: 8px;
+}
+.result-box {
+  height: 150px;
+  width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: wheat;
+}
+
+.result-box h2 {
+  margin-bottom: 10px;
+}
+.author {
+  position: absolute;
+  left: 35px;
+  top: 35px;
+}
+
+.form-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.form-page-text{
+  width:400px;
+  padding: 35px;
+  height: 600px;
+  line-height: 50px;
+  box-sizing: border-box;
+}
+
+
+
+
+
+.modal {
+position: fixed;
+inset: 0;
+background-color: rgba(0,0,0,0.5);
+z-index: 3;
+}
+
+
+.modal-content {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0,5s;
+  animation-name: animatetop;
+  animation-duration: 0.3s;
+  min-height: 250px;
+  max-height: 600px;
+}
+
+
+@-webkit-keyframes animatetop {
+  from {top:-400px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-400px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+
+.modal-header {
+  text-align: center;
+  padding: 20px 0px;
+  color: black;
+}
+
+
+
+
+.modal-body {
+  padding: 2px 16px;
+}
+.modal-body-text{
+  line-height:30px;
+}
+.modal-body-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+.modal-body-button > button {
+  padding: 10px 20px;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #6a62d2;
+  width: 200px;
+  margin-left: 10px;
+}
+.modal-footer {
+  padding: 2px 16px;
+  background-color: grey;
+  color: white;
+}
+
+.result-box{
+  position: fixed;
+inset: 0;
+background-color: rgba(0,0,0,0.5);
+}
+
+.reslt-content{
+  height: 150px;
+  width: 500px;
+  text-align: center;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0,5s;
+  animation-name: animatetop;
+  animation-duration: 0.3s;
+  padding-top: 20px;
+}
+#resultNumber {
+  color: #6a62d2;
+}

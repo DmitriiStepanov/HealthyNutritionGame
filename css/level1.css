@@ -1,0 +1,284 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #eee;
+	color: #111;
+}
+
+.score {
+	font-family: monospace;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: bold;
+	letter-spacing: 0.25rem;
+	margin: 1rem;
+	position: relative;
+	transition: opacity 0.2s;
+}
+
+#play-again-btn {
+	position: absolute;
+	bottom: -0.5rem;
+	left: 53%;
+	margin-left: -50px;
+	font-size: 1rem;
+	font-weight: bold;
+	color: #fff;
+	background-color: #6a62d2;
+	border: none;
+	border-radius: 14px;
+	padding: 8px 10px;
+	outline: none;
+	letter-spacing: .05em;
+	cursor: pointer;
+	display: none;
+	opacity: 0;
+	transition: opacity 0.5s, transform 0.5s, background-color 0.2s;
+}
+
+#play-again-btn:hover {
+	background-color: #333;
+}
+
+#play-again-btn:active {
+	background-color: #555;
+}
+
+#play-again-btn.play-again-btn-entrance {
+	opacity: 1;
+	transform: translateX(6rem);
+}
+
+.draggable-items {
+	display: flex;
+	justify-content: center;
+	margin: 1rem 1rem 1.5rem 1rem;
+	transition: opacity 0.5s;
+}
+
+.draggable {
+	height: 5rem;
+	width: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 4rem;
+	font-weight: bold;
+	margin: 0rem 0.5rem;
+	cursor: move;
+	transition: opacity 0.2s;
+}
+
+.draggable:hover {
+	opacity: 0.5;
+}
+
+.matching-pairs {
+	transition: opacity 0.5s;
+}
+
+.matching-pair {
+	padding: 5px;
+	height: 6rem;
+	width: 22rem;
+	margin: 1rem auto;
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+}
+
+.matching-pair span {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	user-select: none;
+}
+
+.label {
+	width: 15rem;
+	font-size: 2rem;
+}
+
+.droppable {
+	width: 6rem;
+	font-size: 4rem;
+	background-color: #fff;
+	border: 3px dashed #111;
+	transition: 0.2s;
+}
+
+.droppable-hover {
+	background-color: #bee3f0;
+	transform: scale(1.1);
+}
+
+.dropped {
+	border-style: solid;
+}
+
+.dragged {
+	user-select: none;
+	opacity: 0.1;
+	cursor: default;
+}
+
+.draggable.dragged:hover {
+	opacity: 0.1;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	font-size: 12px;
+	border: 1px solid grey;
+	border-radius: 4px;
+}
+
+
+
+.modal {
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 1;
+	/* Sit on top */
+	padding-top: 100px;
+	/* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	overflow: auto;
+	/* Enable scroll if needed */
+	background-color: rgb(0, 0, 0);
+	/* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4);
+	/* Black w/ opacity */
+}
+
+
+.modal-content {
+	position: relative;
+	background-color: #fff;
+	margin: auto;
+	padding: 0;
+	border-radius: 4px;
+	width: 50%;
+	max-height: 400px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-name: animatetop;
+	animation-duration: 0.4s
+}
+
+
+@-webkit-keyframes animatetop {
+	from {
+		top: -300px;
+		opacity: 0
+	}
+
+	to {
+		top: 0;
+		opacity: 1
+	}
+}
+
+@keyframes animatetop {
+	from {
+		top: -300px;
+		opacity: 0
+	}
+
+	to {
+		top: 0;
+		opacity: 1
+	}
+}
+
+
+
+.modal-header {
+	text-align: center;
+	padding: 20px 0px;
+	color: black;
+}
+
+.modal-body {
+	min-height: 40px;
+	padding: 2px 16px;
+}
+
+.modal-body-text {
+	border-radius: 4px;
+	height: 200px;
+	line-height: 30px;
+}
+
+.modal-body-button {
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	padding-top: 20px;
+}
+
+.modal-body-button>button {
+	padding: 10px 20px;
+	border-radius: 2px;
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 500;
+	background-color: #6a62d2;
+	height: 50px;
+}
+
+.modal-footer {
+	padding: 2px 16px;
+	background-color: grey;
+	color: white;
+}
+
+#username-autorized {
+	color: #6a62d2;
+	font-size: 24px
+}
+
+#callories-number {
+	color: #ff1100;
+	font-size: 24px
+}
+
+#result-text {
+	text-align: center;
+}
+
+#try-again {
+	margin-right: 10px;
+}
+
+.matching-pairs {
+	display: flex;
+	justify-content: center;
+}
+
+#tooltip {
+	position: absolute;
+	display: none;
+	background-color: white;
+	border: 1px solid black;
+	padding: 5px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Level 2</title>
+	<link rel="stylesheet" href="../css/level2.css" />
+	<script defer src="../js/level2.js" type="module"></script>
+</head>
+
+<body>
+	<div class="product-container">
+		<div class="product-header">
+			<div>
+				<span id="username-autorized"></span>,
+				<span id="callories-number"></span>
+				<span style="font-weight: bold">ккал</span>
+			</div>
+		</div>
+		<div class="product-contnet">
+			<div>Lives <span id="lives">3</span></div>
+			<section class="score">
+				<div class="time-container">
+					<span class="digit" id="min">00</span>:<span class="digit" id="sec">15</span>
+				</div>
+				Уровень <span class="level">2</span>
+				<button id="play-again-btn">Play Again</button>
+			</section>
+			<section class="draggable-items"></section>
+			<div class="matching-pairs">
+				<section class="matching-pairs-left"></section>
+				<section class="matching-pairs-right"></section>
+			</div>
+		</div>
+		<div id="rules-modal" class="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2>Правила игры. Уровень 2</h2>
+				</div>
+				<div class="modal-body">
+					<div class="modal-body-text">
+						Всё точно так же, но тебе предстоит присоединить уже 8 продуктов:)
+					</div>
+					<div class="modal-body-button">
+						<button id="start">Начать игру</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="result-modal" class="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2>Итоги игры</h2>
+				</div>
+				<div id="result-text" class="modal-body"></div>
+				<div class="modal-body-button">
+					<button id="try-again">Попробовать снова</button><button id="exit">Выход</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
