@@ -116,7 +116,7 @@ body {
 
 .droppable-hover {
 	background-color: #bee3f0;
-	transform: scale(1.1);
+	transform: scale(1.2);
 }
 
 .dropped {

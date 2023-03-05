@@ -169,7 +169,7 @@ function gameOver(hasWon) {
 
 // Game setup
 window.addEventListener("load", () => {
-	speed = 30;
+	speed = 60;
 	categoryEl = document.getElementById("category");
 	scoreEl = document.getElementById("score");
 	livesEl = document.getElementById("lives");
